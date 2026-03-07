@@ -2,7 +2,7 @@ contact_form:
   steps:
     - visit: "https://www.njleg.state.nj.us/members/roster.asp"
     - click_on:
-        - selector: "a[href='$META_OFFICIAL_LAST_SEGMENT_OF_URL'i]"
+        - selector: "a[href*='$META_OFFICIAL_LAST_SEGMENT_OF_URL'i]"
     - click_on:
         - selector: "a[href='../Selectmun.asp']"
     - check:
