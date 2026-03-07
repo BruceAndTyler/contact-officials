@@ -1,12 +1,10 @@
 contact_form:
   steps:
-    - visit: $META_OFFICIAL_URL
-    - javascript:
-        - value: document.querySelector("a[href^='/contact-senator']").setAttribute("target", "");
-    - click_on:
-        - selector: '#block-senate-content > section.section.section_ind_c.section_bg-color_b > div.bContainer > div > div > div:nth-child(2) > div:nth-child(2) > div > div.bSenBio__telMail > div.bSenBio__mail > a'
-    - javascript:
-        - value: "Array.prototype.forEach.call(document.querySelectorAll('style,[rel=\"stylesheet\"],[type=\"text/css\"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });"
+    # Oklahoma Senate contact form.
+    # URL: https://oksenate.gov/contacts/contact-senator?sid={senator_id}
+    # The state select uses select2 (aria-hidden) with full state names as values.
+    # We skip the select step and use JavaScript to set it instead.
+    - visit: "$META_OFFICIAL_URL"
     - fill_in:
         - name: your_name
           selector: "#edit-your-name"
@@ -20,11 +18,17 @@ contact_form:
           selector: "#edit-your-city"
           value: $ADDRESS_CITY
           required: true
-    - select:
-        - name: your_state
-          selector: "#edit-your-state"
-          value: $ADDRESS_STATE_FULL
-          required: true
+    - javascript:
+        # Set state via JS since select2 hides the native <select>.
+        # Map postal abbreviation to full name, set value, trigger change.
+        - value: >
+            (function(){
+              var abbr = document.querySelector('#edit-your-state');
+              if (!abbr) return;
+              var opts = Array.from(abbr.options);
+              abbr.value = 'Oklahoma';
+              abbr.dispatchEvent(new Event('change', {bubbles: true}));
+            })();
     - fill_in:
         - name: your_zipcode
           selector: "#edit-your-zipcode"
@@ -50,7 +54,7 @@ contact_form:
         - value: true
     - click_on:
         - value: Submit
-          selector: "#edit-submit"
+          selector: "input.webform-button--submit"
   success:
     body:
       contains: "Thank you for contacting your"

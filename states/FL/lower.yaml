@@ -1,38 +1,36 @@
 contact_form:
   steps:
     - visit: "$META_OFFICIAL_URL"
-    - click_on:
-        - selector: "a[title='Contact Member']"
     - fill_in:
-        - name: "ctl00$MainContent$Name"
+        - name: Name
           selector: "#Name"
           value: $NAME_FULL
           required: true
-        - name: "ctl00$MainContent$EmailAddress"
+        - name: EmailAddress
           selector: "#EmailAddress"
           value: $EMAIL
           required: true
-        - name: "ctl00$MainContent$Address"
+        - name: Address
           selector: "#Address"
           value: $ADDRESS_STREET
           required: false
-        - name: "ctl00$MainContent$Address2"
+        - name: Address2
           selector: "#Address2"
           value: $ADDRESS_STREET_2
           required: false
-        - name: "ctl00$MainContent$City"
+        - name: City
           selector: "#City"
           value: $ADDRESS_CITY
           required: true
-        - name: "ctl00$MainContent$Zip"
+        - name: Zip
           selector: "#Zip"
           value: $ADDRESS_ZIP5
           required: false
-        - name: "ctl00$MainContent$Phone"
+        - name: Phone
           selector: "#Phone"
           value: $PHONE
           required: false
-        - name: "ctl00$MainContent$Message"
+        - name: Message
           selector: "#Message"
           value: $MESSAGE
           required: true

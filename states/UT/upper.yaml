@@ -1,33 +1,34 @@
 contact_form:
   steps:
+    # Utah Senate uses WordPress Contact Form 7 on senator profile pages.
+    # URL: https://senate.utah.gov/sen/{SLUG}/
+    # $META_OFFICIAL_URL should point to the senator's profile page.
     - visit: "$META_OFFICIAL_URL"
     - fill_in:
-        - name: fname
-          selector: "input[name=fname]"
-          value: $NAME_FIRST
+        - name: your-name
+          selector: "input[name=your-name]"
+          value: $NAME_FULL
           required: true
-        - name: lname
-          selector: "input[name=lname]"
-          value: $NAME_LAST
-          required: true
-        - name: email
-          selector: "input[name=email]"
+        - name: your-email
+          selector: "input[name=your-email]"
           value: $EMAIL
           required: true
-        - name:
-          selector: "#text-yui_3_17_2_1_1544118751424_22626-field"
-          value: $ADDRESS_FULL
+        - name: address
+          selector: "input[name=address]"
+          value: $ADDRESS_STREET
           required: true
-        - name:
-          selector: "#text-yui_3_17_2_1_1544118752637_42026-field"
-          value: $PHONE
+        - name: your-subject
+          selector: "input[name=your-subject]"
+          value: $SUBJECT
           required: true
-        - name:
-          selector: "#textarea-yui_3_17_2_1_1544118752637_42027-field"
+        - name: your-message
+          selector: "textarea[name=your-message]"
           value: $MESSAGE
           required: true
+    - recaptcha:
+        - value: true
     - click_on:
-        - selector: "input[value=Submit]"
+        - selector: "input[type=submit]"
   success:
     body:
       contains: "Thank you"

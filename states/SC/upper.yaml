@@ -1,9 +1,9 @@
-# This config is identical to SC/lower.yaml.
+# SC email form is now at email.php directly (no click-through needed).
+# URL: https://www.scstatehouse.gov/email.php?T=M&C={member_code}
+# $META_OFFICIAL_URL should point to the email.php URL, not the member profile.
 contact_form:
   steps:
     - visit: "$META_OFFICIAL_URL"
-    - click_on:
-        - selector: "#sendMsgLink"
     - fill_in:
         - name: FIRSTNAME
           selector: "#contactform_FIRSTNAME"

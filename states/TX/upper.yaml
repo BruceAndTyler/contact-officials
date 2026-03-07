@@ -1,24 +1,16 @@
 contact_form:
   steps:
-    # Example: https://senate.texas.gov/member.php?d=14
-    # Example: https://senate.texas.gov/member.php?d=1
-    # (These forms are slightly different, thus the
-    # 'skip_if_element_not_present' below.)
+    # Texas Senate member pages have email links with auth tokens.
+    # Navigate to the member page, click the email link, then fill the form.
+    # The email form URL is dynamically generated with an auth param.
     - visit: "$META_OFFICIAL_URL"
     - click_on:
-        - selector: "p.memmail > a"
+        - selector: "a:has-text('Click here to e-mail'), a:has-text('E-mail')"
     - fill_in:
         - name: sender
           selector: "#sender"
           value: $EMAIL
           required: true
-        - name: prefix
-          selector: "#prefix"
-          value: $NAME_PREFIX
-          required: true
-          # Prefix is required on some senators' forms, and not present
-          # at all on others.
-          skip_if_element_not_present: true
         - name: fname
           selector: "#fname"
           value: $NAME_FIRST
@@ -30,16 +22,10 @@ contact_form:
         - name: phone1
           selector: "#phone1"
           value: $PHONE_AREA_CODE
-        - name: phone2
-          selector: "#phone2"
-          value: $PHONE7
         - name: address1
           selector: "#address1"
           value: $ADDRESS_STREET
           required: true
-        - name: address2
-          selector: "#address2"
-          value: $ADDRESS_STREET_2
         - name: city
           selector: "#city"
           value: $ADDRESS_CITY
@@ -62,7 +48,7 @@ contact_form:
           required: true
     - click_on:
         - value: "SEND MESSAGE"
-          selector: "input.subm1"
+          selector: "input[type=submit]"
   success:
     body:
       contains: "The information you supplied was reported as having been successfully delivered."

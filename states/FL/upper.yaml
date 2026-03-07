@@ -1,21 +1,22 @@
 contact_form:
   steps:
-    - visit: "$META_OFFICIAL_URL"
-    - click_on:
-        - selector: "a.contactSenator"
+    - visit: "https://www.flsenate.gov/Senators/S$META_OFFICIAL_DISTRICT/email"
     - select:
         - name: Topic
           selector: "#Topic"
           value: $TOPIC
           required: true
           options:
-            Education: "1"
-            Environment and Natural Resources: "27"
-            Health Care: "3"
-            Jobs and the Economy: "4"
-            Public Safety: "28"
-            State Budget: "5"
-            Other: "0"
+            Affordable Housing: Affordable Housing
+            Child Welfare: Child Welfare
+            Education: Education
+            Environment and Natural Resources: Environment and Natural Resources
+            Health Care: Health Care
+            Jobs and the Economy: Jobs and the Economy
+            Public Safety: Public Safety
+            State Budget: State Budget
+            Taxes: Taxes
+            Other: Other
     - fill_in:
         - name: Comment
           selector: "#Comment"
@@ -125,13 +126,8 @@ contact_form:
     - uncheck:
         - name: ReceiveUpdates
           selector: "#ReceiveUpdates"
-    - fill_in:
-        - name: mathAnswer
-          selector: "#math-test"
-          captcha_selector: "label[for=math-test]"
-          captcha_append_guidance: " = ?"
-          value: $CAPTCHA_SOLUTION
-          required: true
+    - recaptcha:
+        - selector: ".g-recaptcha"
     - click_on:
         - value: Send Email
           selector: "#submitEmailForm"

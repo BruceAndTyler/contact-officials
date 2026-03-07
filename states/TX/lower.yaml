@@ -1,72 +1,68 @@
 contact_form:
   steps:
-    # - visit: https://house.texas.gov/members/member-page/?district=49
+    # Texas House email forms are now at /members/{member_id}/email
+    # Example: https://house.texas.gov/members/2540/email
+    # $META_OFFICIAL_URL should point to the email page directly.
     - visit: "$META_OFFICIAL_URL"
-    - click_on:
-        - selector: "h4.button-email > a"
     - select:
-        - name: "prefix"
+        - name: prefix
           selector: "select[name=prefix]"
-          value: $NAME_PREFIX_NO_PERIOD
+          value: $NAME_PREFIX
           options:
             "Mr": "Mr"
             "Ms": "Ms"
             "Miss": "Miss"
             "Mrs": "Mrs"
             "Rev": "Rev"
-            "Fr (Father)": "Fr"
-            "Dr (Doctor)": "Dr"
+            "Fr": "Fr"
+            "Dr": "Dr"
     - fill_in:
-        - name: name_first
-          selector: "input[name=name_first]"
+        - name: first_name
+          selector: "#first_name"
           value: $NAME_FIRST
           required: true
-        - name: name_last
-          selector: "input[name=name_last]"
+        - name: last_name
+          selector: "#last_name"
           value: $NAME_LAST
           required: true
-        - selector: "input[name=business]"
+        - name: business
+          selector: "#business"
           value: "None"
-          required: true
         - name: address
-          selector: "input[name=address]"
+          selector: "#address"
           value: $ADDRESS_STREET
           required: true
-        - name: address2
-          selector: "input[name=address2]"
-          value: $ADDRESS_STREET_2
         - name: city
-          selector: "input[name=city]"
+          selector: "#city"
           value: $ADDRESS_CITY
           required: true
         - name: state
-          selector: "input[name=state]"
+          selector: "#state"
           value: $ADDRESS_STATE_POSTAL_ABBREV
           required: true
-        - name: zip
-          selector: "input[name=zip]"
+        - name: zipcode
+          selector: "#zipcode"
           value: $ADDRESS_ZIP5
           required: true
-        - name: phonezip
-          selector: "input[name=phonezip]"
-          value: $PHONE_AREA_CODE
-        - name: phonenum
-          selector: "input[name=phonenum]"
-          value: $PHONE7
+        - name: phone
+          selector: "#phone"
+          value: $PHONE
         - name: email
-          selector: "input[name=email]"
+          selector: "#email"
           value: $EMAIL
           required: true
         - name: subject
-          selector: "input[name=subject]"
+          selector: "#subject"
           value: $SUBJECT
-    - fill_in:
         - name: message
-          selector: "textarea[name=message]"
+          selector: "#message"
           value: $MESSAGE
           required: true
+    - recaptcha:
+        - value: true
     - click_on:
-        - selector: "input[type='submit'][name='Submit']"
+        - value: Submit
+          selector: "button:has-text('Submit')"
   success:
     body:
       contains: "Thank You"
