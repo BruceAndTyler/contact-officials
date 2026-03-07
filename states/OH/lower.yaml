@@ -22,7 +22,7 @@ contact_form:
             max_length: 50
         - name: phone
           selector: "#phone"
-          value: $PHONE_DIGITS_ONLY
+          value: $PHONE
           required: true
           options:
             max_length: 14

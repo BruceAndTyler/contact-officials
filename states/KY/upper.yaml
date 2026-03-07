@@ -52,6 +52,8 @@ contact_form:
           selector: "#qi_3"
           value: $MESSAGE
           required: true
+    - javascript:
+        - value: "document.querySelector('#qi_4_1').click();"
     - recaptcha:
         - value: true
     - click_on:

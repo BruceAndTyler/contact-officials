@@ -58,6 +58,8 @@ contact_form:
           value: $MESSAGE
           required: true
     - click_on:
+        - selector: "#requestresponseyes"
+    - click_on:
         - value: Send email
           selector: "button:has-text('Send email')"
   success:

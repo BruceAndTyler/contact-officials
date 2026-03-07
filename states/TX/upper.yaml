@@ -22,6 +22,9 @@ contact_form:
         - name: phone1
           selector: "#phone1"
           value: $PHONE_AREA_CODE
+        - name: phone2
+          selector: "#phone2"
+          value: $PHONE_LAST7
         - name: address1
           selector: "#address1"
           value: $ADDRESS_STREET
