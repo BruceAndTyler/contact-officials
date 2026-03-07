@@ -3,23 +3,31 @@ contact_form:
     - visit: "$META_OFFICIAL_URL/contact"
     - fill_in:
         - name: firstName
-          selector: "input[name=firstName]"
+          selector: "#first-name"
           value: $NAME_FIRST
           required: true
         - name: lastName
-          selector: "input[name=lastName]"
+          selector: "#last-name"
           value: $NAME_LAST
           required: true
-        - name: address
-          selector: "input[name=address]"
+        - name: email
+          selector: "#email"
+          value: $EMAIL
+          required: true
+        - name: phone
+          selector: "#phone"
+          value: $PHONE
+        - name: addressLine1
+          selector: "#address-line-1"
           value: $ADDRESS_STREET
           required: true
         - name: city
-          selector: "input[name=city]"
+          selector: "#city"
           value: $ADDRESS_CITY
+          required: true
     - select:
         - name: state
-          selector: 'select[name=state]'
+          selector: 'select[name="address.state"]'
           value: $ADDRESS_STATE_POSTAL_ABBREV
           options:
             - AL
@@ -75,42 +83,21 @@ contact_form:
             - WY
     - fill_in:
         - name: zip
-          selector: "input[name=zip]"
+          selector: "#zip"
           value: $ADDRESS_ZIP5
           required: true
-        - name: email
-          selector: "input[name=email]"
-          value: $EMAIL
-          required: true
-        - name: areaCode
-          selector: "#areaCode"
-          value: $PHONE_AREA_CODE
-        - name: "p::prefix"
-          selector: "#prefix"
-          value: $PHONE3
-        - name: lineNumber
-          selector: "#lineNumber"
-          value: $PHONE4
-    - select:
         - name: subject
-          selector: "select[name=subject]"
-          value: $TOPIC
-          options:
-            "I want to share my thoughts on an issue or piece of legislation.": 0
-            "I need help with a state agency.": 1
-            "I want to recognize someone for an outstanding achievement or milestone.": 2
-            "I would like to schedule a meeting with my state senator.": 3
-            "I am organizing an event and want to invite my state senator.": 4
-            "I have an issue not listed here. ": 5
-    - fill_in:
-        - name: messageText
-          selector: "textarea[name=messageText]"
+          selector: "#subject"
+          value: $SUBJECT
+          required: true
+        - name: message
+          selector: "#message"
           value: $MESSAGE
           required: true
     - recaptcha:
         - value: true
     - click_on:
-        - selector: "div.contactFormButtons > button[type=submit]"
+        - selector: "button.link-button[type=submit]"
   success:
     body:
       contains: "MESSAGE SENT SUCCESSFULLY"
