@@ -1,0 +1,53 @@
+bioguide: H001046
+contact_form:
+    steps:
+        - visit: "https://www.heinrich.senate.gov/contact/write-martin/form"
+        - fill_in:
+              - name: firstName
+                selector: "#firstName"
+                value: $NAME_FIRST
+                required: true
+              - name: lastName
+                selector: "#input-9431439D-CF7D-9E6A-5A05-0D4027E54362"
+                value: $NAME_LAST
+                required: true
+              - name: address
+                selector: "#input-943144B4-9C79-D3A3-F395-4027A8790606"
+                value: $ADDRESS_STREET
+                required: true
+              - name: city
+                selector: "#input-94314474-BB3F-59BC-D196-62728121608F"
+                value: $ADDRESS_CITY
+                required: true
+              - name: zip
+                selector: "#input-9431425B-B665-DFD1-15E9-3DF3E0F50A84"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: email
+                selector: "#email"
+                value: $EMAIL
+                required: true
+              - name: phone
+                selector: "#input-943142CB-C40B-15E5-39EA-4B8746F7EB35"
+                value: $PHONE
+              - name: subject
+                selector: "#input-94314307-E032-83ED-C95A-2BD2205AC96D"
+                value: $SUBJECT
+                required: true
+              - name: message
+                selector: "#input-94314202-EBEE-43E1-1340-43D2F5A1CC39"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: prefix
+                selector: "#input-94314276-9978-1228-35FB-6399F8C82B53"
+                value: $NAME_PREFIX
+                required: true
+              - name: state
+                selector: "#input-943141E4-9170-8622-49BC-7EEF5DF587F1"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: topic
+                selector: "#topic"
+                value: $TOPIC
+                required: true

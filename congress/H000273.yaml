@@ -1,0 +1,55 @@
+bioguide: H000273
+contact_form:
+    steps:
+        - visit: "https://www.hickenlooper.senate.gov/email-john/"
+        - fill_in:
+              - name: input_3.3
+                selector: "#input_17_3_3"
+                value: $NAME_FIRST
+                required: true
+              - name: input_3.6
+                selector: "#input_17_3_6"
+                value: $NAME_LAST
+                required: true
+              - name: input_5
+                selector: "#input_17_5"
+                value: $ADDRESS_STREET
+                required: true
+              - name: input_7
+                selector: "#input_17_7"
+                value: $ADDRESS_CITY
+                required: true
+              - name: input_9
+                selector: "#input_17_9"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: input_10
+                selector: "#input_17_10"
+                value: $EMAIL
+                required: true
+              - name: input_11
+                selector: "#input_17_11"
+                value: $PHONE
+              - name: input_18
+                selector: "#input_17_18"
+                value: $SUBJECT
+                required: true
+              - name: input_14
+                selector: "#input_17_14"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: input_2
+                selector: "#input_17_2"
+                value: $NAME_PREFIX
+                required: true
+              - name: input_8
+                selector: "#input_17_8"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: input_17
+                selector: "#input_17_17"
+                value: $TOPIC
+                required: true
+        - click_on:
+              - selector: "#gform_submit_button_17"

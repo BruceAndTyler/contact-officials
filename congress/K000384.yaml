@@ -1,0 +1,53 @@
+bioguide: K000384
+contact_form:
+    steps:
+        - visit: "https://www.kaine.senate.gov/contact/share-your-opinion"
+        - fill_in:
+              - name: firstName
+                selector: "#input-C37493FA-32C9-4AC5-8741-DBB15B656231"
+                value: $NAME_FIRST
+                required: true
+              - name: lastName
+                selector: "#input-FA29AA7F-6264-43AD-93A0-A9C8E4137B5C"
+                value: $NAME_LAST
+                required: true
+              - name: address
+                selector: "#input-0EAD335B-9386-4CE4-BEEC-4EB7A25154B0"
+                value: $ADDRESS_STREET
+                required: true
+              - name: city
+                selector: "#input-FDAA72A6-BACD-478E-B29C-71F3517BEC76"
+                value: $ADDRESS_CITY
+                required: true
+              - name: zip
+                selector: "#input-7C66D390-A85C-4BB2-B6D4-D4B2A84642BB"
+                value: $ADDRESS_ZIP5
+                required: true
+              - name: email
+                selector: "#email"
+                value: $EMAIL
+                required: true
+              - name: phone
+                selector: "#input-74E0EC54-C170-4BCB-96AC-0A9CDECF046D"
+                value: $PHONE
+              - name: subject
+                selector: "#input-6113487C-5FF6-4D9E-BE80-52D0AF0F5877"
+                value: $SUBJECT
+                required: true
+              - name: message
+                selector: "#input-B11EA673-0986-41A8-96BF-81980A38B3F6"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: prefix
+                selector: "#prefixtoggle"
+                value: $NAME_PREFIX
+                required: true
+              - name: state
+                selector: "#input-7924F194-C509-4A20-AABE-20E48C6841D9"
+                value: $ADDRESS_STATE_POSTAL_ABBREV
+                required: true
+              - name: topic
+                selector: "#input-7B718140-BE58-48FA-AB5C-74CC385B8D07"
+                value: $TOPIC
+                required: true

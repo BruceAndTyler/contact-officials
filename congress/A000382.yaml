@@ -1,0 +1,52 @@
+bioguide: A000382
+contact_form:
+    steps:
+        - visit: "https://www.alsobrooks.senate.gov/share-your-opinion/"
+        - wait:
+            - value: 3
+        - fill_in:
+            - name: firstName
+              selector: "#input_2_2"
+              value: $NAME_FIRST
+              required: true
+            - name: lastName
+              selector: "#input_2_3"
+              value: $NAME_LAST
+              required: true
+            - name: address
+              selector: "#input_2_6_1"
+              value: $ADDRESS_STREET
+              required: true
+            - name: city
+              selector: "#input_2_6_3"
+              value: $ADDRESS_CITY
+              required: true
+            - name: zip
+              selector: "#input_2_6_5"
+              value: $ADDRESS_ZIP5
+              required: true
+            - name: email
+              selector: "#input_2_42"
+              value: $EMAIL
+              required: true
+            - name: subject
+              selector: "#input_2_11"
+              value: $SUBJECT
+              required: true
+            - name: message
+              selector: "#input_2_12"
+              value: $MESSAGE
+              required: true
+        - select:
+            - name: topic
+              selector: "#input_2_17"
+              value: $TOPIC
+              required: true
+            - name: state
+              selector: "#input_2_6_4"
+              value: $ADDRESS_STATE_POSTAL_ABBREV
+              required: true
+        - javascript:
+            - value: "document.querySelector('#input_2_12').value = document.querySelector('#input_2_12').value.replace(/\"/g, '');"
+        - click_on:
+            - selector: "#gform_submit_button_2"
