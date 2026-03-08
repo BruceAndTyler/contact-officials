@@ -20,6 +20,9 @@ contact_form:
               - name: input_6_3
                 selector: "#input_11_6_3"
                 value: $ADDRESS_CITY
+              - name: input_6_4
+                selector: "#input_11_6_4"
+                value: $ADDRESS_STATE_FULL
               - name: input_6_5
                 selector: "#input_11_6_5"
                 value: $ADDRESS_ZIP5
@@ -28,6 +31,10 @@ contact_form:
                 value: $PHONE
               - name: input_9
                 selector: "#input_11_9"
+                value: $EMAIL
+                required: true
+              - name: input_9_2
+                selector: "#input_11_9_2"
                 value: $EMAIL
                 required: true
               - name: input_11
@@ -47,5 +54,9 @@ contact_form:
                 selector: "#input_11_17"
                 value: $TOPIC
                 required: true
+        - javascript:
+              - value: "document.querySelector('#choice_11_14_0').click();"
+        - javascript:
+              - value: "document.querySelector('#choice_11_18_1').click();"
         - click_on:
               - selector: "#gform_submit_button_11"

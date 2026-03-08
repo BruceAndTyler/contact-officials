@@ -53,3 +53,17 @@ contact_form:
                 selector: "#input-7B718140-BE58-48FA-AB5C-74CC385B8D07"
                 value: $TOPIC
                 required: true
+              - name: response
+                selector: "#input-569786FF-5652-42DE-A5EE-A7FBD312BC39"
+                value: Y
+                required: true
+                options:
+                    Y: "Yes"
+                    N: "No"
+              - name: newsletter
+                selector: "#newslettertoggle"
+                value: EMAIL.OPTOUT
+                required: true
+                options:
+                    EMAIL.OPTIN: "Yes"
+                    EMAIL.OPTOUT: "No"

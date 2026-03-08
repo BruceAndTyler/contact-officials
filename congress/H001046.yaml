@@ -29,6 +29,10 @@ contact_form:
                 selector: "#email"
                 value: $EMAIL
                 required: true
+              - name: verifyEmail
+                selector: "#input-94314152-96CD-417F-4522-DB707C8D39C5"
+                value: $EMAIL
+                required: true
               - name: phone
                 selector: "#input-943142CB-C40B-15E5-39EA-4B8746F7EB35"
                 value: $PHONE
@@ -53,3 +57,9 @@ contact_form:
                 selector: "#topic"
                 value: $TOPIC
                 required: true
+        - javascript:
+              - value: "document.querySelector('#input-94314119-CA32-DB5B-2A98-DCC3D083B1AC').click();"
+        - javascript:
+              - value: "document.querySelector('#newsletteractiontoggle-1').click();"
+        - javascript:
+              - value: "document.querySelector('#input-94314135-C91C-F610-24E4-9509F3018AFB').click();"

@@ -32,6 +32,10 @@ contact_form:
                 selector: "#email"
                 value: $EMAIL
                 required: true
+              - name: verifyEmail
+                selector: "#input-AB721CE8-4040-F985-52CD-9E550E8A76AA"
+                value: $EMAIL
+                required: true
               - name: phone
                 selector: "#input-AB67BC2F-4040-F985-52CD-007A86DA4D47"
                 value: $PHONE
@@ -52,3 +56,7 @@ contact_form:
                 selector: "#input-AB8156A0-4040-F985-52CD-49CE65770EFC"
                 value: $TOPIC
                 required: true
+        - check:
+              - name: response
+                selector: "#input-F605C9E3-4040-F985-52CD-9DC4076E8672"
+                required: false
