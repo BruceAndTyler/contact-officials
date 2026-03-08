@@ -1,0 +1,43 @@
+bioguide: M001198
+contact_form:
+    steps:
+        - visit: "https://www.marshall.senate.gov/contact/contact-form/"
+        - fill_in:
+              - name: input_2
+                selector: "#input_11_2"
+                value: $NAME_FIRST
+                required: true
+              - name: input_3
+                selector: "#input_11_3"
+                value: $NAME_LAST
+                required: true
+              - name: input_4
+                selector: "#input_11_4"
+                value: $ADDRESS_STREET
+                required: true
+              - name: input_7
+                selector: "#input_11_7"
+                value: $PHONE
+              - name: input_9
+                selector: "#input_11_9"
+                value: $EMAIL
+                required: true
+              - name: input_12
+                selector: "#input_11_12"
+                value: $SUBJECT
+                required: true
+              - name: input_13
+                selector: "#input_11_13"
+                value: $MESSAGE
+                required: true
+        - select:
+              - name: input_1
+                selector: "#input_11_1"
+                value: $NAME_PREFIX
+                required: true
+              - name: input_11
+                selector: "#input_11_11"
+                value: $TOPIC
+                required: true
+        - click_on:
+              - selector: "#gform_submit_button_11"
