@@ -2,6 +2,8 @@ bioguide: M001198
 contact_form:
     steps:
         - visit: "https://www.marshall.senate.gov/contact/contact-form/"
+        - wait:
+            - value: 5
         - fill_in:
               - name: input_2
                 selector: "#input_11_2"
