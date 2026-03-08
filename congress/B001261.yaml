@@ -49,7 +49,5 @@ contact_form:
                 selector: "select[name='topic']"
                 value: $TOPIC
                 required: true
-        - fill_in:
-              - name: other-topic
-                selector: "input[name='other-topic']"
-                value: $SUBJECT
+        - javascript:
+              - value: "var labels = document.querySelectorAll('label'); for (var i = 0; i < labels.length; i++) { if (labels[i].textContent.toLowerCase().indexOf('if other') !== -1) { var forAttr = labels[i].getAttribute('for'); var inp = forAttr ? document.getElementById(forAttr) : labels[i].querySelector('input,textarea'); if (!inp) inp = labels[i].parentElement.querySelector('input[type=\"text\"],textarea'); if (inp) { inp.value = 'GovPal Reach Webform Test'; inp.dispatchEvent(new Event('input',{bubbles:true})); break; } } }"

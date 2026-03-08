@@ -56,7 +56,5 @@ contact_form:
                 selector: "#input-AB8156A0-4040-F985-52CD-49CE65770EFC"
                 value: $TOPIC
                 required: true
-        - check:
-              - name: response
-                selector: "#input-F605C9E3-4040-F985-52CD-9DC4076E8672"
-                required: false
+        - javascript:
+              - value: "var cb = document.querySelector('#input-F605C9E3-4040-F985-52CD-9DC4076E8672'); if (cb) { var lbl = document.querySelector('label[for=\"input-F605C9E3-4040-F985-52CD-9DC4076E8672\"]'); if (lbl) { lbl.click(); } else { cb.click(); } }"
