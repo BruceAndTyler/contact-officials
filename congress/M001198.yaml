@@ -2,8 +2,8 @@ bioguide: M001198
 contact_form:
     steps:
         - visit: "https://www.marshall.senate.gov/contact/contact-form/"
-        - wait:
-            - value: 5
+        - find:
+            - selector: "#input_11_2"
         - fill_in:
               - name: input_2
                 selector: "#input_11_2"
@@ -13,10 +13,16 @@ contact_form:
                 selector: "#input_11_3"
                 value: $NAME_LAST
                 required: true
-              - name: input_4
-                selector: "#input_11_4"
+              - name: input_6_1
+                selector: "#input_11_6_1"
                 value: $ADDRESS_STREET
                 required: true
+              - name: input_6_3
+                selector: "#input_11_6_3"
+                value: $ADDRESS_CITY
+              - name: input_6_5
+                selector: "#input_11_6_5"
+                value: $ADDRESS_ZIP5
               - name: input_7
                 selector: "#input_11_7"
                 value: $PHONE
@@ -24,12 +30,12 @@ contact_form:
                 selector: "#input_11_9"
                 value: $EMAIL
                 required: true
-              - name: input_12
-                selector: "#input_11_12"
+              - name: input_11
+                selector: "#input_11_11"
                 value: $SUBJECT
                 required: true
-              - name: input_13
-                selector: "#input_11_13"
+              - name: input_12
+                selector: "#input_11_12"
                 value: $MESSAGE
                 required: true
         - select:
@@ -37,8 +43,8 @@ contact_form:
                 selector: "#input_11_1"
                 value: $NAME_PREFIX
                 required: true
-              - name: input_11
-                selector: "#input_11_11"
+              - name: input_17
+                selector: "#input_11_17"
                 value: $TOPIC
                 required: true
         - click_on:

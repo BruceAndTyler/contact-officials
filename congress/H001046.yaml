@@ -2,8 +2,8 @@ bioguide: H001046
 contact_form:
     steps:
         - visit: "https://www.heinrich.senate.gov/contact/write-martin/form"
-        - wait:
-            - value: 5
+        - find:
+            - selector: "#firstName"
         - fill_in:
               - name: firstName
                 selector: "#firstName"

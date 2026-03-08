@@ -2,8 +2,8 @@ bioguide: P000595
 contact_form:
     steps:
         - visit: "https://www.peters.senate.gov/contact/email-gary"
-        - wait:
-            - value: 5
+        - find:
+            - selector: "#email"
         - fill_in:
               - name: prefix
                 selector: "#input-260E577D-5056-A066-6070-226296904340"
