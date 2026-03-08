@@ -1,0 +1,79 @@
+bioguide: C001113
+contact_form:
+  method: post
+  action: /content/contact-senator
+  steps:
+    - visit: "https://www.cortezmasto.senate.gov/contact/connect"
+    - wait:
+        - value: 2
+    - javascript:
+        - value: Array.prototype.forEach.call(document.querySelectorAll('style,[rel="stylesheet"],[type="text/css"]'), function(element){ try{ element.parentNode.removeChild(element) } catch(err){} });
+    - javascript:
+        - value: "document.querySelector('#elementor-tab-content-1151').removeAttribute('hidden');"
+    - javascript:
+        - value: "document.querySelector('#elementor-tab-content-1151').removeAttribute('class');"
+    - javascript:
+        - value: "document.querySelector('#gform_wrapper_2').style.display = 'block'"
+    - fill_in:
+        - name: "input_2"
+          selector: "#input_2_2"
+          value: $NAME_FIRST
+          required: true
+        - name: "input_3"
+          selector: "#input_2_3"
+          value: $NAME_LAST
+          required: true
+        - name: "input_6.1"
+          selector: "#input_2_6_1"
+          value: $ADDRESS_STREET
+          required: true
+        - name: "input_6.3"
+          selector: "#input_2_6_3"
+          value: $ADDRESS_CITY
+          required: true
+        - name: "input_6.5"
+          selector: "#input_2_6_5"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: "input_41"
+          selector: "#input_2_41"
+          value: $PHONE
+          required: true
+        - name: "input_9"
+          selector: "#input_2_9"
+          value: $EMAIL
+          required: true
+        - name: "input_9_2"
+          selector: "#input_2_9_2"
+          value: $EMAIL
+          required: true
+        - name: "input_11"
+          selector: "#input_2_11"
+          value: $SUBJECT
+          required: true
+        - name: "input_12"
+          selector: "#input_2_12"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: "input_39"
+          selector: "#input_2_39"
+          value: $NAME_PREFIX
+          required: true
+        - name: "input_6.4"
+          selector: "#input_2_6_4"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+        - name: "input_17"
+          selector: "#input_2_17"
+          value: $TOPIC
+          required: true
+    - javascript:
+        - value: document.querySelector('#gform_2 .gform-footer input#gform_submit_button_2').click();
+    - wait:
+        - value: 3
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "We will work to provide a response as soon as possible. If you need immediate assistance, please call my office."

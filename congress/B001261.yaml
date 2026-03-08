@@ -31,6 +31,11 @@ contact_form:
                 selector: "textarea[name='your-message']"
                 value: $MESSAGE
                 required: true
+              - name: home-phone
+                selector: "input[name='home-phone']"
+                value: $PHONE
+        - javascript:
+              - value: "document.querySelector('input[name=\"want-response\"][value=\"Yes\"]').click();"
         - select:
               - name: Prefix
                 selector: "select[name='Prefix']"
@@ -44,3 +49,7 @@ contact_form:
                 selector: "select[name='topic']"
                 value: $TOPIC
                 required: true
+        - fill_in:
+              - name: other-topic
+                selector: "input[name='other-topic']"
+                value: $SUBJECT

@@ -27,6 +27,10 @@ contact_form:
                 selector: "#input_17_10"
                 value: $EMAIL
                 required: true
+              - name: input_10_2
+                selector: "#input_17_10_2"
+                value: $EMAIL
+                required: true
               - name: input_11
                 selector: "#input_17_11"
                 value: $PHONE

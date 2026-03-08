@@ -29,6 +29,9 @@ contact_form:
               selector: "#input_2_42"
               value: $EMAIL
               required: true
+            - name: phone
+              selector: "#input_2_41"
+              value: $PHONE
             - name: subject
               selector: "#input_2_11"
               value: $SUBJECT
