@@ -1,0 +1,166 @@
+bioguide: B001230
+contact_form:
+  method: post
+  action: "https://www.baldwin.senate.gov/contact/contact-tammy"
+  steps:
+    - visit: "https://www.baldwin.senate.gov/contact/contact-tammy"
+    - wait:
+        - value: 5
+    - javascript:
+        - value: document.querySelector('.SiteLayout__main').innerHTML = '<div id="form-B03E03FC-4040-F985-52CD-BCD7E00A8A6C" class="amend-form-container loaded"><form id="B03E03FC-4040-F985-52CD-BCD7E00A8A6C" action="https://www.baldwin.senate.gov/contact/contact-tammy" method="post"><div class="show-form" style="display:block"><fieldset><legend>Your Name</legend><div class="control-group"><label class="control-label" for="input-B03E0527-4040-F985-52CD-C0DD6BEF325F">Preferred Prefix</label><div class="controls"><select id="input-B03E0527-4040-F985-52CD-C0DD6BEF325F" name="input_B03E0527-4040-F985-52CD-C0DD6BEF325F"><option value="">--</option><option value="Mr.">Mr.</option><option value="Ms.">Ms.</option><option value="Mrs.">Mrs.</option><option value="Mx.">Mx.</option><option value="Professor">Professor</option><option value="Dr.">Dr.</option><option value="Father">Father</option><option value="Sister">Sister</option><option value="Rabbi">Rabbi</option><option value="Reverend">Reverend</option></select></div></div><div class="row"><div class="col-md-6"><div class="control-group"><label class="control-label" for="firstname">First Name<span class="required">*</span></label><div class="controls"><input id="firstname" name="input_B03E05C4-4040-F985-52CD-9CA44623DE5E" type="text" placeholder="Required"></div></div></div><div class="col-md-6"><div class="control-group"><label class="control-label" for="input-B03E04BD-4040-F985-52CD-48E090E769DA">Last Name<span class="required">*</span></label><div class="controls"><input id="input-B03E04BD-4040-F985-52CD-48E090E769DA" name="input_B03E04BD-4040-F985-52CD-48E090E769DA" type="text" placeholder="Required"></div></div></div></div></fieldset><fieldset><legend>Your Contact Information</legend><div class="row"><div class="col-md-6"><div class="control-group"><label class="control-label" for="input-B03E05F1-4040-F985-52CD-A580E72A7D41">Street Address<span class="required">*</span></label><div class="controls"><input id="input-B03E05F1-4040-F985-52CD-A580E72A7D41" name="input_B03E05F1-4040-F985-52CD-A580E72A7D41" type="text" placeholder="Required"></div></div></div></div><div class="row"><div class="col-md-6"><div class="control-group"><label class="control-label" for="input-B03E0595-4040-F985-52CD-C572364023FE">City<span class="required">*</span></label><div class="controls"><input id="input-B03E0595-4040-F985-52CD-C572364023FE" name="input_B03E0595-4040-F985-52CD-C572364023FE" type="text" placeholder="Required"></div></div></div><div class="col-md-2"><div class="control-group"><label class="control-label" for="input-B03E0669-4040-F985-52CD-11B231195172">State<span class="required">*</span></label><div class="controls"><select id="input-B03E0669-4040-F985-52CD-11B231195172" name="input_B03E0669-4040-F985-52CD-11B231195172"><option value="">--</option><option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option><option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option><option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option><option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option><option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option><option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option><option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option><option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option><option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option><option value="WI">WI</option><option value="WY">WY</option></select></div></div></div><div class="col-md-4"><div class="control-group"><label class="control-label" for="zipcode">Zip<span class="required">*</span></label><div class="controls"><input id="zipcode" name="input_B03E04CC-4040-F985-52CD-4DDB58DA474A" type="text" placeholder="Required"></div></div></div></div><div class="row"><div class="col-md-6"><div class="control-group"><label class="control-label" for="input-B03E046E-4040-F985-52CD-A2F10450D58D">Phone Number<span class="required">*</span></label><div class="controls"><input id="input-B03E046E-4040-F985-52CD-A2F10450D58D" name="input_B03E046E-4040-F985-52CD-A2F10450D58D" type="text" placeholder="Required"></div></div></div></div><div class="row"><div class="col-md-6"><div class="control-group"><label class="control-label" for="email">Email<span class="required">*</span></label><div class="controls"><input id="email" name="input_B03E0536-4040-F985-52CD-AFE12CDE8D31" type="text" placeholder="Required"></div></div></div><div class="col-md-6"><div class="control-group"><label class="control-label" for="input-B03E05A4-4040-F985-52CD-730C08912F4F">Verify Email<span class="required">*</span></label><div class="controls"><input id="input-B03E05A4-4040-F985-52CD-730C08912F4F" name="input_B03E05A4-4040-F985-52CD-730C08912F4F" type="text" placeholder="Required"></div></div></div></div></fieldset><fieldset><legend>Your Message</legend><div class="control-group"><label class="control-label" for="input-561C6766-5056-A066-60C9-A3C3AE42D8BE">Subject:<span class="required">*</span></label><div class="controls"><input id="input-561C6766-5056-A066-60C9-A3C3AE42D8BE" name="input_561C6766-5056-A066-60C9-A3C3AE42D8BE" type="text" placeholder="Please type a subject"></div></div><div class="control-group"><label class="control-label" for="input-B03E04DB-4040-F985-52CD-18F332336F99">Message Topic<span class="required">*</span></label><div class="controls"><select id="input-B03E04DB-4040-F985-52CD-18F332336F99" name="input_B03E04DB-4040-F985-52CD-18F332336F99"><option value="">--Select an Issue--</option><option value="AG">Agriculture</option><option value="AN">Animal Welfare</option><option value="APPROPS">Appropriations</option><option value="BANK">Banking / Securities</option><option value="BUD">Budget</option><option value="JUD">Civil Rights</option><option value="CONG">Congressional Issues</option><option value="DEF">Defense</option><option value="ECON">Economy</option><option value="ED">Education</option><option value="ELEC">Elections</option><option value="EN">Energy / Natural Resources</option><option value="ENV">Environment</option><option value="FR">Foreign Affairs</option><option value="GUN">Second Amendment</option><option value="HE">Healthcare</option><option value="HUD">Housing</option><option value="IM">Immigration</option><option value="LAB">Labor</option><option value="BUS">Small Business</option><option value="SS">Social Security</option><option value="TAX">Taxes</option><option value="TELECOM">Telecommunications</option><option value="TRD">Trade / Commerce</option><option value="TRAN">Transportation</option><option value="VET">Veterans</option><option value="GENERAL">Other</option></select></div></div><div class="control-group"><label class="control-label" for="input-B03E05B4-4040-F985-52CD-8DF0BC10EEE2">Message<span class="required">*</span></label><div class="controls"><textarea id="input-B03E05B4-4040-F985-52CD-8DF0BC10EEE2" name="input_B03E05B4-4040-F985-52CD-8DF0BC10EEE2"></textarea></div></div><div class="control-group"><div>Would you like a response?</div><div class="controls"><div><div class="checkbox-container"><input type="radio" id="input-FDC00FDA-BE38-FFF7-2435-28171988F9D9" name="input_CF837338-919A-CD0B-755E-51BAEFFF30FD" value="FDC00FDA-BE38-FFF7-2435-28171988F9D9"><label for="input-FDC00FDA-BE38-FFF7-2435-28171988F9D9">Yes, please contact me</label></div><div class="checkbox-container"><input type="radio" id="input-FDC0100A-9282-D116-5180-CB8642FD2C7A" name="input_CF837338-919A-CD0B-755E-51BAEFFF30FD" value="FDC0100A-9282-D116-5180-CB8642FD2C7A"><label for="input-FDC0100A-9282-D116-5180-CB8642FD2C7A">No, I wanted to voice my opinion</label></div></div></div></div></fieldset></div><div><input type="hidden" id="creativengine-form-identifier" name="creativengine_form_identifier" value="B03E03FC-4040-F985-52CD-BCD7E00A8A6C"></div><div class="control-group"><div class="controls"><button type="submit" class="btn">Submit</button></div></div></form></div>'
+    - fill_in:
+        - name: input_B03E05C4-4040-F985-52CD-9CA44623DE5E
+          selector: "#firstname"
+          value: $NAME_FIRST
+          required: true
+        - name: input_B03E04BD-4040-F985-52CD-48E090E769DA
+          selector: "#input-B03E04BD-4040-F985-52CD-48E090E769DA"
+          value: $NAME_LAST
+          required: true
+        - name: input_B03E05F1-4040-F985-52CD-A580E72A7D41
+          selector: "#input-B03E05F1-4040-F985-52CD-A580E72A7D41"
+          value: $ADDRESS_STREET
+          required: true
+        - name: input_B03E0595-4040-F985-52CD-C572364023FE
+          selector: "#input-B03E0595-4040-F985-52CD-C572364023FE"
+          value: $ADDRESS_CITY
+          required: true
+        - name: input_B03E04CC-4040-F985-52CD-4DDB58DA474A
+          selector: "#zipcode"
+          value: $ADDRESS_ZIP5
+          required: true
+        - name: input_B03E046E-4040-F985-52CD-A2F10450D58D
+          selector: "#input-B03E046E-4040-F985-52CD-A2F10450D58D"
+          value: $PHONE
+          required: true
+        - name: input_B03E0536-4040-F985-52CD-AFE12CDE8D31
+          selector: "#email"
+          value: $EMAIL
+          required: true
+        - name: input_B03E05A4-4040-F985-52CD-730C08912F4F
+          selector: "#input-B03E05A4-4040-F985-52CD-730C08912F4F"
+          value: $EMAIL
+          required: true
+        - name: input_561C6766-5056-A066-60C9-A3C3AE42D8BE
+          selector: "#input-561C6766-5056-A066-60C9-A3C3AE42D8BE"
+          value: $SUBJECT
+          required: true
+        - name: input_B03E05B4-4040-F985-52CD-8DF0BC10EEE2
+          selector: "#input-B03E05B4-4040-F985-52CD-8DF0BC10EEE2"
+          value: $MESSAGE
+          required: true
+    - select:
+        - name: input_B03E0669-4040-F985-52CD-11B231195172
+          selector: "#input-B03E0669-4040-F985-52CD-11B231195172"
+          value: $ADDRESS_STATE_POSTAL_ABBREV
+          required: true
+          options:
+            AL: AL
+            AK: AK
+            AR: AR
+            AZ: AZ
+            CA: CA
+            CO: CO
+            CT: CT
+            DC: DC
+            DE: DE
+            FL: FL
+            GA: GA
+            HI: HI
+            ID: ID
+            IL: IL
+            IN: IN
+            IA: IA
+            KS: KS
+            KY: KY
+            LA: LA
+            ME: ME
+            MD: MD
+            MA: MA
+            MI: MI
+            MN: MN
+            MS: MS
+            MO: MO
+            MT: MT
+            NE: NE
+            NV: NV
+            NH: NH
+            NJ: NJ
+            NM: NM
+            NY: NY
+            NC: NC
+            ND: ND
+            OH: OH
+            OK: OK
+            OR: OR
+            PA: PA
+            RI: RI
+            SC: SC
+            SD: SD
+            TN: TN
+            TX: TX
+            UT: UT
+            VT: VT
+            VA: VA
+            WA: WA
+            WV: WV
+            WI: WI
+            WY: WY
+        - name: input_B03E04DB-4040-F985-52CD-18F332336F99
+          selector: "#input-B03E04DB-4040-F985-52CD-18F332336F99"
+          value: $TOPIC
+          required: true
+          options:
+            Agriculture: AG
+            Animal Welfare: AN
+            Appropriations: APPROPS
+            Banking / Securities: BANK
+            Budget: BUD
+            Civil Rights: JUD
+            Congressional Issues: CONG
+            Defense: DEF
+            Economy: ECON
+            Education: ED
+            Elections: ELEC
+            Energy / Natural Resources: EN
+            Environment: ENV
+            Foreign Affairs: FR
+            Healthcare: HE
+            Housing: HUD
+            Immigration: IM
+            Labor: LAB
+            Second Amendment: GUN
+            Small Business: BUS
+            Social Security: SS
+            Taxes: TAX
+            Telecommunications: TELECOM
+            Trade / Commerce: TRD
+            Transportation: TRAN
+            Veterans: VET
+            Other: GENERAL
+        - name: input_B03E0527-4040-F985-52CD-C0DD6BEF325F
+          selector: "#input-B03E0527-4040-F985-52CD-C0DD6BEF325F"
+          value: $NAME_PREFIX
+          required: false
+          options:
+            Mr.: Mr.
+            Ms.: Ms.
+            Mrs.: Mrs.
+            Mx.: Mx.
+            Professor: Professor
+            Dr.: Dr.
+            Father: Father
+            Sister: Sister
+            Rabbi: Rabbi
+            Reverend: Reverend
+    - javascript:
+        - value: document.querySelector("#input-B03E05B4-4040-F985-52CD-8DF0BC10EEE2").value = document.querySelector("#input-B03E05B4-4040-F985-52CD-8DF0BC10EEE2").value.replace(/"/g, '');
+    - javascript:
+        - value: document.querySelector('#input-FDC0100A-9282-D116-5180-CB8642FD2C7A').click();
+    - click_on:
+        - selector: ".controls .btn"
+  success:
+    headers:
+      status: 200
+    body:
+      contains: "Contact Tammy"
